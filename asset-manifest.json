@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DailyTracker/static/css/main.0e4fe0ac.css",
+    "main.js": "/DailyTracker/static/js/main.aa1535cd.js",
+    "index.html": "/DailyTracker/index.html",
+    "main.0e4fe0ac.css.map": "/DailyTracker/static/css/main.0e4fe0ac.css.map",
+    "main.aa1535cd.js.map": "/DailyTracker/static/js/main.aa1535cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e4fe0ac.css",
+    "static/js/main.aa1535cd.js"
+  ]
+}
