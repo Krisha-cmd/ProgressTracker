@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-27T17:04:46.026Z",
+  "lastUpdated": "2026-02-27T17:07:40.958Z",
   "profile": {
     "username": "krisha-cmd",
     "realName": "Krisha Rajinder Aggarwal",
@@ -16,11 +16,11 @@
   },
   "problemStats": {
     "easy": {
-      "solved": 0,
+      "solved": 90,
       "total": 927
     },
     "medium": {
-      "solved": 0,
+      "solved": 1,
       "total": 2014
     },
     "hard": {

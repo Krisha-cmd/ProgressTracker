@@ -19,8 +19,11 @@ async function fetchLeetCodeStats() {
     // Fetch user contest info
     const contestInfo = await leetcode.user_contest_info(USERNAME);
 
-    // Process problem stats
-    const submitStats = user?.matchedUser?.submitStatsGlobal?.acSubmissionNum || [];
+    // Process problem stats - check both possible locations
+    const submitStats = user?.matchedUser?.submitStats?.acSubmissionNum || 
+                        user?.matchedUser?.submitStatsGlobal?.acSubmissionNum ||
+                        [];
+    
     const allQuestions = user?.allQuestionsCount || [];
     
     const totalQuestions = {};
