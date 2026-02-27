@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ProgressTracker/static/css/main.0e4fe0ac.css",
-    "main.js": "/ProgressTracker/static/js/main.ae02b2d0.js",
+    "main.js": "/ProgressTracker/static/js/main.b02f9182.js",
     "index.html": "/ProgressTracker/index.html",
     "main.0e4fe0ac.css.map": "/ProgressTracker/static/css/main.0e4fe0ac.css.map",
-    "main.ae02b2d0.js.map": "/ProgressTracker/static/js/main.ae02b2d0.js.map"
+    "main.b02f9182.js.map": "/ProgressTracker/static/js/main.b02f9182.js.map"
   },
   "entrypoints": [
     "static/css/main.0e4fe0ac.css",
-    "static/js/main.ae02b2d0.js"
+    "static/js/main.b02f9182.js"
   ]
 }
