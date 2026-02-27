@@ -1,0 +1,155 @@
+{
+  "lastUpdated": "2026-02-27T17:04:46.026Z",
+  "profile": {
+    "username": "krisha-cmd",
+    "realName": "Krisha Rajinder Aggarwal",
+    "avatar": "https://assets.leetcode.com/users/krisha-cmd/avatar_1725177125.png",
+    "ranking": 1564049,
+    "reputation": 0,
+    "contributionPoints": 75
+  },
+  "contestInfo": {
+    "attended": 0,
+    "rating": 0,
+    "globalRanking": 0,
+    "topPercentage": 0
+  },
+  "problemStats": {
+    "easy": {
+      "solved": 0,
+      "total": 927
+    },
+    "medium": {
+      "solved": 0,
+      "total": 2014
+    },
+    "hard": {
+      "solved": 0,
+      "total": 910
+    }
+  },
+  "badges": [],
+  "recentSubmissions": [
+    {
+      "title": "Clear Digits",
+      "titleSlug": "clear-digits",
+      "timestamp": 1770311196,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Power of Two",
+      "titleSlug": "power-of-two",
+      "timestamp": 1770221027,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Number of Segments in a String",
+      "titleSlug": "number-of-segments-in-a-string",
+      "timestamp": 1770115557,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Number of Segments in a String",
+      "titleSlug": "number-of-segments-in-a-string",
+      "timestamp": 1770115497,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Number of Segments in a String",
+      "titleSlug": "number-of-segments-in-a-string",
+      "timestamp": 1770114941,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Number of Segments in a String",
+      "titleSlug": "number-of-segments-in-a-string",
+      "timestamp": 1770114709,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Detect Capital",
+      "titleSlug": "detect-capital",
+      "timestamp": 1770114347,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Detect Capital",
+      "titleSlug": "detect-capital",
+      "timestamp": 1770114291,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Detect Capital",
+      "titleSlug": "detect-capital",
+      "timestamp": 1770114143,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Detect Capital",
+      "titleSlug": "detect-capital",
+      "timestamp": 1770113947,
+      "lang": "cpp",
+      "statusDisplay": "Wrong Answer",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Arranging Coins",
+      "titleSlug": "arranging-coins",
+      "timestamp": 1770113497,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Arranging Coins",
+      "titleSlug": "arranging-coins",
+      "timestamp": 1770113279,
+      "lang": "cpp",
+      "statusDisplay": "Runtime Error",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Arranging Coins",
+      "titleSlug": "arranging-coins",
+      "timestamp": 1770112838,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Can Place Flowers",
+      "titleSlug": "can-place-flowers",
+      "timestamp": 1770054876,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Can Place Flowers",
+      "titleSlug": "can-place-flowers",
+      "timestamp": 1770054761,
+      "lang": "cpp",
+      "statusDisplay": "Runtime Error",
+      "difficulty": "Easy"
+    }
+  ],
+  "submissionCalendar": "{\"1767225600\": 2, \"1768780800\": 4, \"1769644800\": 5, \"1769731200\": 5, \"1769817600\": 15, \"1769904000\": 4, \"1769990400\": 10, \"1770076800\": 11, \"1770163200\": 1, \"1770249600\": 1, \"1756684800\": 3, \"1756857600\": 24, \"1756944000\": 11, \"1757030400\": 11, \"1757116800\": 11, \"1757203200\": 7, \"1757289600\": 8, \"1757376000\": 8, \"1757462400\": 8, \"1757548800\": 8, \"1757635200\": 8, \"1757721600\": 4, \"1757808000\": 9, \"1757894400\": 2, \"1757980800\": 2, \"1758067200\": 2, \"1758153600\": 3}"
+}
