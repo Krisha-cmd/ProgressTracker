@@ -2,7 +2,7 @@
   "name": "leetcode-tracker",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://krisha-cmd.github.io/DailyTracker",
+  "homepage": "https://krisha-cmd.github.io/ProgressTracker",
   "dependencies": {
     "leetcode-query": "^1.2.2",
     "lucide-react": "^0.300.0",
