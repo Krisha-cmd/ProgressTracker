@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/DailyTracker/static/css/main.0e4fe0ac.css",
-    "main.js": "/DailyTracker/static/js/main.aa1535cd.js",
-    "index.html": "/DailyTracker/index.html",
-    "main.0e4fe0ac.css.map": "/DailyTracker/static/css/main.0e4fe0ac.css.map",
-    "main.aa1535cd.js.map": "/DailyTracker/static/js/main.aa1535cd.js.map"
+    "main.css": "/ProgressTracker/static/css/main.0e4fe0ac.css",
+    "main.js": "/ProgressTracker/static/js/main.aa1535cd.js",
+    "index.html": "/ProgressTracker/index.html",
+    "main.0e4fe0ac.css.map": "/ProgressTracker/static/css/main.0e4fe0ac.css.map",
+    "main.aa1535cd.js.map": "/ProgressTracker/static/js/main.aa1535cd.js.map"
   },
   "entrypoints": [
     "static/css/main.0e4fe0ac.css",
