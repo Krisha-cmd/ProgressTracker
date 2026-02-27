@@ -1,0 +1,236 @@
+.last-submission {
+  grid-column: span 8;
+}
+
+.submission-icon {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%) !important;
+}
+
+.submissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 20px;
+}
+
+.submission-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.submission-item:hover {
+  border-color: var(--accent-blue);
+  transform: translateX(4px);
+}
+
+.submission-item.accepted {
+  border-left: 3px solid var(--accent-green);
+}
+
+.submission-item.failed {
+  border-left: 3px solid var(--accent-red);
+}
+
+.submission-status {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.submission-item.accepted .submission-status {
+  background: rgba(0, 214, 143, 0.15);
+}
+
+.submission-item.accepted .submission-status svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-green);
+}
+
+.submission-item.failed .submission-status {
+  background: rgba(255, 71, 87, 0.15);
+}
+
+.submission-item.failed .submission-status svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-red);
+}
+
+.submission-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.submission-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.problem-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.difficulty-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.difficulty-badge.easy {
+  background: rgba(0, 214, 143, 0.15);
+  color: var(--accent-green);
+}
+
+.difficulty-badge.medium {
+  background: rgba(255, 184, 0, 0.15);
+  color: var(--accent-yellow);
+}
+
+.difficulty-badge.hard {
+  background: rgba(255, 71, 87, 0.15);
+  color: var(--accent-red);
+}
+
+.submission-meta {
+  display: flex;
+  gap: 16px;
+}
+
+.submission-time,
+.submission-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.submission-time svg,
+.submission-lang svg {
+  width: 14px;
+  height: 14px;
+}
+
+.no-submissions {
+  text-align: center;
+  padding: 48px 20px;
+}
+
+.no-submissions-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-submissions-icon svg {
+  width: 30px;
+  height: 30px;
+  color: var(--text-muted);
+}
+
+.no-submissions p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.no-submissions span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.submission-footer {
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.stats-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.summary-value.accepted {
+  color: var(--accent-green);
+}
+
+.summary-value.total {
+  color: var(--text-primary);
+}
+
+.summary-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+@media (max-width: 1200px) {
+  .last-submission {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .submission-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .submission-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

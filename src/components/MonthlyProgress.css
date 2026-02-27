@@ -1,0 +1,232 @@
+.monthly-progress {
+  grid-column: span 8;
+}
+
+.calendar-icon {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, #7c3aed 100%) !important;
+}
+
+.card-header {
+  position: relative;
+}
+
+.challenge-badge {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 12px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 8px;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-purple);
+}
+
+.nav-btn svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+}
+
+.month-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.weekday {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-day:not(.empty):hover {
+  transform: scale(1.05);
+  border-color: var(--border-color);
+}
+
+.calendar-day.qualified {
+  background: linear-gradient(135deg, rgba(0, 214, 143, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 20px var(--accent-green-glow);
+}
+
+.calendar-day.today {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue-glow);
+}
+
+.calendar-day.today.qualified {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 2px var(--accent-green-glow), 0 0 20px var(--accent-green-glow);
+}
+
+.day-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.calendar-day.qualified .day-number {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.calendar-day.today .day-number {
+  color: var(--accent-blue);
+}
+
+.qualified-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.calendar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.legend-dot.qualified {
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green-glow);
+}
+
+.legend-dot.empty {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.streak-info {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.streak-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-green);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.streak-text {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+  .monthly-progress {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-grid {
+    gap: 4px;
+  }
+
+  .calendar-day {
+    border-radius: 8px;
+  }
+
+  .day-number {
+    font-size: 12px;
+  }
+
+  .challenge-badge {
+    display: none;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
