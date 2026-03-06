@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MonthlyProgress.css';
 
 function MonthlyProgress({ userData }) {
   const { submissions } = userData;
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [checkedInDays, setCheckedInDays] = useState({});
+
+  // Load checked-in days from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('leetcode-checkins');
+    if (saved) {
+      setCheckedInDays(JSON.parse(saved));
+    }
+  }, []);
+
+  // Save checked-in days to localStorage
+  const saveCheckIn = (dateKey) => {
+    const updated = { ...checkedInDays, [dateKey]: true };
+    setCheckedInDays(updated);
+    localStorage.setItem('leetcode-checkins', JSON.stringify(updated));
+  };
 
   // Get days in month
   const getDaysInMonth = (date) => {
@@ -28,6 +44,41 @@ function MonthlyProgress({ userData }) {
     
     // Check if before 6:30 AM IST
     return hours < 6 || (hours === 6 && minutes < 30);
+  };
+
+  // Get today's date key for localStorage
+  const getTodayKey = () => {
+    const today = new Date();
+    return `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+  };
+
+  // Check if today is qualified (green)
+  const isTodayQualified = () => {
+    const today = new Date();
+    if (submissions && Array.isArray(submissions)) {
+      return submissions.some((sub) => {
+        const date = new Date(sub.timestamp * 1000);
+        if (date.getDate() === today.getDate() && 
+            date.getMonth() === today.getMonth() && 
+            date.getFullYear() === today.getFullYear()) {
+          return checkSubmissionQualifies(sub.timestamp, sub.difficulty);
+        }
+        return false;
+      });
+    }
+    return false;
+  };
+
+  // Check if already checked in today
+  const isCheckedInToday = () => {
+    return checkedInDays[getTodayKey()] === true;
+  };
+
+  // Handle check-in button click
+  const handleCheckIn = () => {
+    if (isTodayQualified() && !isCheckedInToday()) {
+      saveCheckIn(getTodayKey());
+    }
   };
 
   // Build calendar data
@@ -68,11 +119,15 @@ function MonthlyProgress({ userData }) {
         new Date().getMonth() === month && 
         new Date().getFullYear() === year;
       
+      const dateKey = `${year}-${month}-${day}`;
+      const isCheckedIn = checkedInDays[dateKey] === true;
+      
       calendarDays.push({
         day,
         qualified: qualifiedDays.has(day),
         isToday,
-        isPast: new Date(year, month, day) < new Date()
+        isPast: new Date(year, month, day) < new Date(),
+        isCheckedIn
       });
     }
 
@@ -92,7 +147,10 @@ function MonthlyProgress({ userData }) {
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   const qualifiedCount = calendarData.filter(d => d.qualified).length;
+  const checkedInCount = calendarData.filter(d => d.isCheckedIn).length;
   const totalDays = calendarData.filter(d => d.day && d.isPast).length;
+
+  const canCheckInToday = isTodayQualified() && !isCheckedInToday();
 
   return (
     <div className="monthly-progress card">
@@ -107,6 +165,29 @@ function MonthlyProgress({ userData }) {
         </div>
         <h2>Morning Challenge</h2>
         <span className="challenge-badge">Before 6:30 IST</span>
+      </div>
+
+      <div className="checkin-section">
+        <button 
+          className={`checkin-btn ${canCheckInToday ? 'active' : ''} ${isCheckedInToday() ? 'checked' : ''}`}
+          onClick={handleCheckIn}
+          disabled={!canCheckInToday}
+        >
+          {isCheckedInToday() ? (
+            <>
+              <span className="checkin-icon">✓</span>
+              Checked In!
+            </>
+          ) : (
+            <>
+              <span className="checkin-icon">K</span>
+              Check In
+            </>
+          )}
+        </button>
+        {!isTodayQualified() && !isCheckedInToday() && (
+          <p className="checkin-hint">Solve a Medium/Hard before 6:30 AM to check in</p>
+        )}
       </div>
 
       <div className="calendar-header">
@@ -130,12 +211,12 @@ function MonthlyProgress({ userData }) {
         {calendarData.map((item, index) => (
           <div
             key={index}
-            className={`calendar-day ${!item.day ? 'empty' : ''} ${item.qualified ? 'qualified' : ''} ${item.isToday ? 'today' : ''}`}
+            className={`calendar-day ${!item.day ? 'empty' : ''} ${item.qualified ? 'qualified' : ''} ${item.isToday ? 'today' : ''} ${item.isCheckedIn ? 'checked-in' : ''}`}
           >
             {item.day && (
               <>
-                <span className="day-number">{item.day}</span>
-                {item.qualified && <span className="qualified-dot"></span>}
+                <span className="day-number">{item.isCheckedIn ? 'K' : item.day}</span>
+                {item.qualified && !item.isCheckedIn && <span className="qualified-dot"></span>}
               </>
             )}
           </div>
@@ -149,13 +230,13 @@ function MonthlyProgress({ userData }) {
             <span>Solved before 6:30 AM</span>
           </div>
           <div className="legend-item">
-            <span className="legend-dot empty"></span>
-            <span>No early solve</span>
+            <span className="legend-dot checked-in-legend"></span>
+            <span>Checked In (K)</span>
           </div>
         </div>
         <div className="streak-info">
-          <span className="streak-count">{qualifiedCount}</span>
-          <span className="streak-text">/ {totalDays || 0} days</span>
+          <span className="streak-count">{checkedInCount}</span>
+          <span className="streak-text">/ {qualifiedCount} check-ins</span>
         </div>
       </div>
     </div>
