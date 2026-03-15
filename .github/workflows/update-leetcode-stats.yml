@@ -16,21 +16,44 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install leetcode-query
+        run: npm ci
 
       - name: Fetch LeetCode Stats
         run: node scripts/fetchLeetCodeStats.js
 
-      - name: Commit and push if changed
+      - name: Commit and push stats to main if changed
+        id: commit_main
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
-          git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update LeetCode stats [skip ci]" && git push)
+          git add public/leetcode-stats.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No stats changes to commit."
+          else
+            git commit -m "Update LeetCode stats [skip ci]"
+            git push origin main
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build app for GitHub Pages
+        if: steps.commit_main.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        if: steps.commit_main.outputs.changed == 'true'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
