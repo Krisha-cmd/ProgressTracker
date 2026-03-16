@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-03-15T04:17:50.348Z",
+  "lastUpdated": "2026-03-16T04:23:53.692Z",
   "profile": {
     "username": "krisha-cmd",
     "realName": "Krisha Rajinder Aggarwal",
     "avatar": "https://assets.leetcode.com/users/krisha-cmd/avatar_1725177125.png",
-    "ranking": 1580427,
+    "ranking": 1568325,
     "reputation": 0,
-    "contributionPoints": 76
+    "contributionPoints": 77
   },
   "contestInfo": {
     "attended": 0,
@@ -20,7 +20,7 @@
       "total": 932
     },
     "medium": {
-      "solved": 2,
+      "solved": 3,
       "total": 2026
     },
     "hard": {
@@ -30,6 +30,14 @@
   },
   "badges": [],
   "recentSubmissions": [
+    {
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "timestamp": 1773622101,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Medium"
+    },
     {
       "title": "Longest Substring Without Repeating Characters",
       "titleSlug": "longest-substring-without-repeating-characters",
@@ -141,15 +149,7 @@
       "lang": "cpp",
       "statusDisplay": "Accepted",
       "difficulty": "Easy"
-    },
-    {
-      "title": "Arranging Coins",
-      "titleSlug": "arranging-coins",
-      "timestamp": 1770113279,
-      "lang": "cpp",
-      "statusDisplay": "Runtime Error",
-      "difficulty": "Easy"
     }
   ],
-  "submissionCalendar": "{\"1767225600\": 2, \"1768780800\": 4, \"1769644800\": 5, \"1769731200\": 5, \"1769817600\": 15, \"1769904000\": 4, \"1769990400\": 10, \"1770076800\": 11, \"1770163200\": 1, \"1770249600\": 1, \"1773532800\": 3, \"1756684800\": 3, \"1756857600\": 24, \"1756944000\": 11, \"1757030400\": 11, \"1757116800\": 11, \"1757203200\": 7, \"1757289600\": 8, \"1757376000\": 8, \"1757462400\": 8, \"1757548800\": 8, \"1757635200\": 8, \"1757721600\": 4, \"1757808000\": 9, \"1757894400\": 2, \"1757980800\": 2, \"1758067200\": 2, \"1758153600\": 3}"
+  "submissionCalendar": "{\"1767225600\": 2, \"1768780800\": 4, \"1769644800\": 5, \"1769731200\": 5, \"1769817600\": 15, \"1769904000\": 4, \"1769990400\": 10, \"1770076800\": 11, \"1770163200\": 1, \"1770249600\": 1, \"1773532800\": 3, \"1773619200\": 1, \"1756684800\": 3, \"1756857600\": 24, \"1756944000\": 11, \"1757030400\": 11, \"1757116800\": 11, \"1757203200\": 7, \"1757289600\": 8, \"1757376000\": 8, \"1757462400\": 8, \"1757548800\": 8, \"1757635200\": 8, \"1757721600\": 4, \"1757808000\": 9, \"1757894400\": 2, \"1757980800\": 2, \"1758067200\": 2, \"1758153600\": 3}"
 }
