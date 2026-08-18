@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-08-17T02:44:38.305Z",
+  "lastUpdated": "2026-08-18T02:39:22.906Z",
   "profile": {
     "username": "krisha-cmd",
     "realName": "Krisha Rajinder Aggarwal",
     "avatar": "https://assets.leetcode.com/users/krisha-cmd/avatar_1725177125.png",
-    "ranking": 1699287,
+    "ranking": 1700578,
     "reputation": 0,
-    "contributionPoints": 83
+    "contributionPoints": 84
   },
   "contestInfo": {
     "attended": 0,
@@ -20,16 +20,32 @@
       "total": 960
     },
     "medium": {
-      "solved": 5,
+      "solved": 6,
       "total": 2103
     },
     "hard": {
-      "solved": 0,
-      "total": 965
+      "solved": 1,
+      "total": 966
     }
   },
   "badges": [],
   "recentSubmissions": [
+    {
+      "title": "Number of Provinces",
+      "titleSlug": "number-of-provinces",
+      "timestamp": 1786975658,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Medium"
+    },
+    {
+      "title": "Largest Rectangle in Histogram",
+      "titleSlug": "largest-rectangle-in-histogram",
+      "timestamp": 1786973027,
+      "lang": "cpp",
+      "statusDisplay": "Accepted",
+      "difficulty": "Hard"
+    },
     {
       "title": "Add Two Numbers",
       "titleSlug": "add-two-numbers",
@@ -133,23 +149,7 @@
       "lang": "cpp",
       "statusDisplay": "Wrong Answer",
       "difficulty": "Easy"
-    },
-    {
-      "title": "Number of Segments in a String",
-      "titleSlug": "number-of-segments-in-a-string",
-      "timestamp": 1770114709,
-      "lang": "cpp",
-      "statusDisplay": "Wrong Answer",
-      "difficulty": "Easy"
-    },
-    {
-      "title": "Detect Capital",
-      "titleSlug": "detect-capital",
-      "timestamp": 1770114347,
-      "lang": "cpp",
-      "statusDisplay": "Accepted",
-      "difficulty": "Easy"
     }
   ],
-  "submissionCalendar": "{\"1767225600\": 2, \"1768780800\": 4, \"1769644800\": 5, \"1769731200\": 5, \"1769817600\": 15, \"1769904000\": 4, \"1769990400\": 10, \"1770076800\": 11, \"1770163200\": 1, \"1770249600\": 1, \"1773532800\": 3, \"1773619200\": 1, \"1773705600\": 1, \"1775433600\": 3, \"1756684800\": 3, \"1756857600\": 24, \"1756944000\": 11, \"1757030400\": 11, \"1757116800\": 11, \"1757203200\": 7, \"1757289600\": 8, \"1757376000\": 8, \"1757462400\": 8, \"1757548800\": 8, \"1757635200\": 8, \"1757721600\": 4, \"1757808000\": 9, \"1757894400\": 2, \"1757980800\": 2, \"1758067200\": 2, \"1758153600\": 3}"
+  "submissionCalendar": "{\"1767225600\": 2, \"1768780800\": 4, \"1769644800\": 5, \"1769731200\": 5, \"1769817600\": 15, \"1769904000\": 4, \"1769990400\": 10, \"1770076800\": 11, \"1770163200\": 1, \"1770249600\": 1, \"1773532800\": 3, \"1773619200\": 1, \"1773705600\": 1, \"1775433600\": 3, \"1786924800\": 2, \"1756684800\": 3, \"1756857600\": 24, \"1756944000\": 11, \"1757030400\": 11, \"1757116800\": 11, \"1757203200\": 7, \"1757289600\": 8, \"1757376000\": 8, \"1757462400\": 8, \"1757548800\": 8, \"1757635200\": 8, \"1757721600\": 4, \"1757808000\": 9, \"1757894400\": 2, \"1757980800\": 2, \"1758067200\": 2, \"1758153600\": 3}"
 }
