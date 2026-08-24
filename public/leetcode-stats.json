@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-08-23T02:47:54.461Z",
+  "lastUpdated": "2026-08-24T02:48:34.218Z",
   "profile": {
     "username": "krisha-cmd",
     "realName": "Krisha Rajinder Aggarwal",
     "avatar": "https://assets.leetcode.com/users/krisha-cmd/avatar_1725177125.png",
-    "ranking": 1680060,
+    "ranking": 1681280,
     "reputation": 0,
     "contributionPoints": 85
   },
@@ -17,15 +17,15 @@
   "problemStats": {
     "easy": {
       "solved": 90,
-      "total": 960
+      "total": 961
     },
     "medium": {
       "solved": 6,
-      "total": 2103
+      "total": 2105
     },
     "hard": {
       "solved": 1,
-      "total": 966
+      "total": 967
     }
   },
   "badges": [],
