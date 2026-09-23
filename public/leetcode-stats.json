@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-09-22T06:42:42.870Z",
+  "lastUpdated": "2026-09-23T06:33:17.323Z",
   "profile": {
     "username": "krisha-cmd",
     "realName": "Krisha Rajinder Aggarwal",
     "avatar": "https://assets.leetcode.com/users/krisha-cmd/avatar_1725177125.png",
-    "ranking": 1714802,
+    "ranking": 1716009,
     "reputation": 0,
     "contributionPoints": 86
   },
@@ -25,7 +25,7 @@
     },
     "hard": {
       "solved": 1,
-      "total": 976
+      "total": 977
     }
   },
   "badges": [],
